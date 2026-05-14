@@ -1,0 +1,201 @@
+{
+  "agent_name": "上肢骨折康复智能助手",
+  "agent_type": "康复医疗助手",
+  "version": "2.0.0",
+  "description": "专业的上肢骨折康复智能助手，提供全方位的康复指导、训练方案、健康管理和智能问答服务",
+  "capabilities": [
+    "康复训练指导",
+    "治疗方案建议",
+    "并发症预防",
+    "护理要点提醒",
+    "饮食营养建议",
+    "智能问答交互",
+    "康复日记记录",
+    "康复计算工具",
+    "康复工具库",
+    "紧急联系管理",
+    "目标设定追踪",
+    "训练计划定制",
+    "数据统计分析",
+    "每日打卡提醒",
+    "并发症自测",
+    "知识测验评估",
+    "社区交流互动",
+    "数据分析报告",
+    "智能对话服务",
+    "论文视频资源"
+  ],
+  "target_users": [
+    "上肢骨折患者",
+    "康复期患者",
+    "康复治疗师",
+    "护理人员",
+    "患者家属"
+  ],
+  "supported_fracture_types": [
+    "肱骨骨折",
+    "桡骨骨折",
+    "尺骨骨折",
+    "腕骨骨折",
+    "掌骨骨折",
+    "指骨骨折",
+    "锁骨骨折",
+    "肩胛骨骨折",
+    "肘关节骨折",
+    "肩关节骨折"
+  ],
+  "rehabilitation_stages": [
+    {
+      "stage": "急性期",
+      "duration": "1-2周",
+      "goals": [
+        "消肿止痛",
+        "预防关节僵硬",
+        "维持肌肉功能"
+      ],
+      "key_activities": [
+        "手指屈伸训练",
+        "腕关节被动活动",
+        "肩部钟摆运动",
+        "肌肉等长收缩"
+      ]
+    },
+    {
+      "stage": "亚急性期",
+      "duration": "3-6周",
+      "goals": [
+        "恢复关节活动度",
+        "增强肌肉力量",
+        "提高协调性"
+      ],
+      "key_activities": [
+        "主动关节活动训练",
+        "等张肌力训练",
+        "协调性训练",
+        "日常生活活动训练"
+      ]
+    },
+    {
+      "stage": "恢复期",
+      "duration": "7-12周",
+      "goals": [
+        "全面恢复功能",
+        "重返正常生活",
+        "预防复发"
+      ],
+      "key_activities": [
+        "强化训练",
+        "功能性训练",
+        "耐力训练",
+        "运动技能训练"
+      ]
+    }
+  ],
+  "features": {
+    "navigation": {
+      "type": "侧边栏导航",
+      "responsive": true,
+      "modules": 20
+    },
+    "data_storage": {
+      "method": "localStorage",
+      "persistence": true,
+      "data_types": [
+        "康复日记",
+        "康复目标",
+        "打卡记录",
+        "紧急联系人",
+        "社区帖子",
+        "统计数据"
+      ]
+    },
+    "calculators": [
+      "BMI计算器",
+      "握力指数计算",
+      "关节活动度计算",
+      "训练强度计算"
+    ],
+    "tools": [
+      "计时器",
+      "计数器",
+      "提醒设置",
+      "测量记录"
+    ],
+    "assessment": {
+      "risk_assessment": true,
+      "knowledge_quiz": true,
+      "progress_tracking": true
+    },
+    "community": {
+      "post_sharing": true,
+      "comment_system": true,
+      "like_function": true
+    },
+    "analysis": {
+      "excel_import": true,
+      "data_visualization": true,
+      "report_generation": true
+    }
+  },
+  "integration": {
+    "ai_chat": {
+      "enabled": true,
+      "provider": "豆包智能体",
+      "features": [
+        "智能问答",
+        "个性化建议",
+        "康复指导",
+        "情感支持"
+      ]
+    },
+    "video_resources": {
+      "platform": "YouTube",
+      "embed_support": true,
+      "categories": [
+        "基础教程",
+        "进阶训练",
+        "专项指导"
+      ]
+    }
+  },
+  "security": {
+    "data_privacy": true,
+    "local_storage_only": true,
+    "no_external_api_calls": true,
+    "user_consent_required": false
+  },
+  "accessibility": {
+    "responsive_design": true,
+    "mobile_friendly": true,
+    "keyboard_navigation": true,
+    "screen_reader_support": false
+  },
+  "technical_specifications": {
+    "frontend": {
+      "html_version": "HTML5",
+      "css_version": "CSS3",
+      "javascript_version": "ES6+",
+      "frameworks": [],
+      "libraries": []
+    },
+    "browser_support": [
+      "Chrome 90+",
+      "Firefox 88+",
+      "Safari 14+",
+      "Edge 90+"
+    ],
+    "responsive_breakpoints": {
+      "mobile": "480px",
+      "tablet": "768px",
+      "desktop": "1024px"
+    }
+  },
+  "language": "zh-CN",
+  "charset": "UTF-8",
+  "created_date": "2024-01-15",
+  "last_updated": "2024-01-15",
+  "contact": {
+    "support_email": "support@rehab-assistant.com",
+    "documentation": "https://docs.rehab-assistant.com"
+  }
+}

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上肢骨折康复智能助手</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">💪 上肢骨折康复智能助手</h1>
+                <p class="header-subtitle">专业康复指导 · 科学训练方案 · 全程陪伴康复</p>
+            </div>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalDays">0</span>
+                    <span class="stat-label">康复天数</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="completedTasks">0</span>
+                    <span class="stat-label">完成任务</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="progressPercent">0%</span>
+                    <span class="stat-label">康复进度</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="sidebar-title">功能模块</div>
+                <nav class="nav-list">
+                    <button class="nav-item active" data-section="rehab">
+                        <span class="nav-icon">💪</span>
+                        <span class="nav-text">康复训练</span>
+                    </button>
+                    <button class="nav-item" data-section="treatment">
+                        <span class="nav-icon">🏥</span>
+                        <span class="nav-text">治疗方案</span>
+                    </button>
+                    <button class="nav-item" data-section="complications">
+                        <span class="nav-icon">⚠️</span>
+                        <span class="nav-text">并发症预防</span>
+                    </button>
+                    <button class="nav-item" data-section="nursing">
+                        <span class="nav-icon">👩‍⚕️</span>
+                        <span class="nav-text">护理要点</span>
+                    </button>
+                    <button class="nav-item" data-section="diet">
+                        <span class="nav-icon">🍎</span>
+                        <span class="nav-text">饮食建议</span>
+                    </button>
+                    <button class="nav-item" data-section="qa">
+                        <span class="nav-icon">💬</span>
+                        <span class="nav-text">智能问答</span>
+                    </button>
+                    <button class="nav-item" data-section="diary">
+                        <span class="nav-icon">📝</span>
+                        <span class="nav-text">康复日记</span>
+                    </button>
+                    <button class="nav-item" data-section="calculator">
+                        <span class="nav-icon">🧮</span>
+                        <span class="nav-text">康复计算</span>
+                    </button>
+                    <button class="nav-item" data-section="tools">
+                        <span class="nav-icon">🛠️</span>
+                        <span class="nav-text">康复工具</span>
+                    </button>
+                    <button class="nav-item" data-section="emergency">
+                        <span class="nav-icon">🚑</span>
+                        <span class="nav-text">紧急联系</span>
+                    </button>
+                    <button class="nav-item" data-section="goals">
+                        <span class="nav-icon">🎯</span>
+                        <span class="nav-text">目标设定</span>
+                    </button>
+                    <button class="nav-item" data-section="plan">
+                        <span class="nav-icon">📋</span>
+                        <span class="nav-text">训练计划</span>
+                    </button>
+                    <button class="nav-item" data-section="statistics">
+                        <span class="nav-icon">📈</span>
+                        <span class="nav-text">数据统计</span>
+                    </button>
+                    <button class="nav-item" data-section="checkin">
+                        <span class="nav-icon">✅</span>
+                        <span class="nav-text">每日打卡</span>
+                    </button>
+                    <button class="nav-item" data-section="selftest">
+                        <span class="nav-icon">🔍</span>
+                        <span class="nav-text">并发症自测</span>
+                    </button>
+                    <button class="nav-item" data-section="quiz">
+                        <span class="nav-icon">📝</span>
+                        <span class="nav-text">知识测验</span>
+                    </button>
+                    <button class="nav-item" data-section="community">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">康复社区</span>
+                    </button>
+                    <button class="nav-item" data-section="analysis">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">数据分析</span>
+                    </button>
+                    <button class="nav-item" data-section="chat">
+                        <span class="nav-icon">🤖</span>
+                        <span class="nav-text">智能对话</span>
+                    </button>
+                    <button class="nav-item" data-section="papers">
+                        <span class="nav-icon">📚</span>
+                        <span class="nav-text">论文与视频</span>
+                    </button>
+                </nav>
+            </aside>
+
+            <main class="main-area">
+                <section id="rehab" class="content-section active">
+                    <h2 class="section-title">💪 上肢骨折康复训练</h2>
+                    <p class="section-desc">上肢骨折康复训练是恢复肢体功能的关键环节。科学的训练计划能够帮助您逐步恢复关节活动范围、肌肉力量和日常生活能力。请在医生指导下进行训练。</p>
+                    
+                    <div class="card">
+                        <h3 class="card-title">🏋️ 第一阶段：急性期康复（1-2周）</h3>
+                        <div class="card-content">
+                            <p><strong>训练目标：</strong>消肿止痛，预防关节僵硬</p>
+                            <ul style="margin-top: 15px; padding-left: 20px;">
+                                <li>手指屈伸训练：每天10-15次，每次3组</li>
+                                <li>腕关节被动活动：在无痛范围内缓慢活动</li>
+                                <li>肩部钟摆运动：身体前倾，手臂自然下垂做圆周运动</li>
+                                <li>肌肉等长收缩：在不移动关节的情况下收缩肌肉</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🏋️ 第二阶段：亚急性期康复（3-6周）</h3>
+                        <div class="card-content">
+                            <p><strong>训练目标：</strong>恢复关节活动度，增强肌肉力量</p>
+                            <ul style="margin-top: 15px; padding-left: 20px;">
+                                <li>主动关节活动训练：逐渐增加活动范围</li>
+                                <li>等张肌力训练：使用弹力带进行抗阻训练</li>
+                                <li>协调性训练：精细动作练习</li>
+                                <li>日常生活活动训练：穿衣、洗漱等</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🏋️ 第三阶段：恢复期康复（7-12周）</h3>
+                        <div class="card-content">
+                            <p><strong>训练目标：</strong>全面恢复功能，重返正常生活</p>
+                            <ul style="margin-top: 15px; padding-left: 20px;">
+                                <li>强化训练：渐进式抗阻训练</li>
+                                <li>功能性训练：模拟日常活动</li>
+                                <li>耐力训练：有氧运动结合</li>
+                                <li>运动技能训练：专项运动恢复</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🎯 训练注意事项</h3>
+                        <div class="card-content">
+                            <ul style="padding-left: 20px;">
+                                <li>遵循循序渐进原则，不可急于求成</li>
+                                <li>训练过程中如出现疼痛应立即停止</li>
+                                <li>保持训练频率，每天坚持练习</li>
+                                <li>定期复查，根据医生建议调整训练计划</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="treatment" class="content-section">
+                    <h2 class="section-title">🏥 治疗方案</h2>
+                    <p class="section-desc">根据骨折类型和严重程度，制定个性化的治疗方案。包括保守治疗和手术治疗两种方式。</p>
+
+                    <div class="card">
+                        <h3 class="card-title">🔧 保守治疗方案</h3>
+                        <div class="card-content">
+                            <p><strong>适用情况：</strong>骨折移位不明显、稳定性好的骨折</p>
+                            <ul style="margin-top: 15px; padding-left: 20px;">
+                                <li>石膏固定：4-8周，定期复查X光</li>
+                                <li>支具固定：更舒适，便于早期康复</li>
+                                <li>牵引治疗：适用于特定类型骨折</li>
+                                <li>药物治疗：止痛、消肿、促进骨愈合</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🔧 手术治疗方案</h3>
+                        <div class="card-content">
+                            <p><strong>适用情况：</strong>骨折移位明显、不稳定性骨折、开放性骨折</p>
+                            <ul style="margin-top: 15px; padding-left: 20px;">
+                                <li>内固定术：钢板、螺钉、髓内钉固定</li>
+                                <li>外固定术：适用于开放性骨折或软组织损伤严重</li>
+                                <li>关节置换术：适用于严重关节粉碎性骨折</li>
+                                <li>术后康复：早期开始功能锻炼</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">💊 药物治疗</h3>
+                        <div class="card-content">
+                            <ul style="padding-left: 20px;">
+                                <li>止痛药物：非甾体抗炎药、阿片类药物</li>
+                                <li>消肿药物：甘露醇、七叶皂苷钠</li>
+                                <li>促进骨愈合药物：钙剂、维生素D、骨肽</li>
+                                <li>抗凝药物：预防深静脉血栓形成</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="complications" class="content-section">
+                    <h2 class="section-title">⚠️ 并发症预防</h2>
+                    <p class="section-desc">了解可能出现的并发症，采取积极预防措施，确保康复过程安全顺利。</p>
+
+                    <div class="card">
+                        <h3 class="card-title">🦴 常见并发症</h3>
+                        <div class="card-content">
+                            <ul style="padding-left: 20px;">
+                                <li><strong>骨不连：</strong>骨折延迟愈合或不愈合</li>
+                                <li><strong>畸形愈合：</strong>骨折愈合位置不良</li>
+                                <li><strong>关节僵硬：</strong>长期固定导致关节活动受限</li>
+                                <li><strong>肌肉萎缩：</strong>长期制动导致肌肉力量下降</li>
+                                <li><strong>深静脉血栓：</strong>长期卧床导致血栓形成</li>
+                                <li><strong>感染：</strong>开放性骨折或手术后感染</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🛡️ 预防措施</h3>
+                        <div class="card-content">
+                            <ul style="padding-left: 20px;">
+                                <li>早期开始康复训练，预防关节僵硬和肌肉萎缩</li>
+                                <li>定期复查，及时发现和处理问题</li>
+                                <li>保持伤口清洁，预防感染</li>
+                                <li>适当活动，预防深静脉血栓</li>
+                                <li>合理营养，促进骨折愈合</li>
+                                <li>遵医嘱用药，避免并发症</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="nursing" class="content-section">
+                    <h2 class="section-title">👩‍⚕️ 护理要点</h2>
+                    <p class="section-desc">正确的护理方法能够加速康复进程，减少并发症发生。</p>
+
+                    <div class="card">
+                        <h3 class="card-title">🏠 家庭护理要点</h3>
+                        <div class="card-content">
+                            <ul style="padding-left: 20px;">
+                                <li>保持患肢抬高，促进血液回流，减轻肿胀</li>
+                                <li>定期观察患肢血运、感觉、运动情况</li>
+                                <li>保持固定装置清洁干燥，避免潮湿</li>
+                                <li>按时更换敷料，保持伤口清洁</li>
+                                <li>协助患者进行日常生活活动</li>
+                                <li>提供心理支持，保持积极心态</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🛏️ 卧床护理</h3>
+                        <div class="card-content">
+                            <ul style="padding-left: 20px;">
+                                <li>定时翻身，预防压疮</li>
+                                <li>进行深呼吸训练，预防肺部感染</li>
+                                <li>多饮水，预防泌尿系感染</li>
+                                <li>进行下肢活动，预防深静脉血栓</li>
+                                <li>保持床单位清洁平整</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🚿 个人卫生</h3>
+                        <div class="card-content">
+                            <ul style="padding-left: 20px;">
+                                <li>保持皮肤清洁，预防皮肤感染</li>
+                                <li>注意口腔卫生，预防口腔疾病</li>
+                                <li>定期洗澡，注意保护患肢</li>
+                                <li>保持指甲清洁，避免抓伤皮肤</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="diet" class="content-section">
+                    <h2 class="section-title">🍎 饮食建议</h2>
+                    <p class="section-desc">合理的营养摄入对骨折愈合至关重要。科学的饮食搭配能够加速康复进程。</p>
+
+                    <div class="card">
+                        <h3 class="card-title">🥗 推荐食物</h3>
+                        <div class="card-content">
+                            <ul style="padding-left: 20px;">
+                                <li><strong>高蛋白食物：</strong>鱼、肉、蛋、奶、豆制品</li>
+                                <li><strong>高钙食物：</strong>牛奶、酸奶、奶酪、深绿色蔬菜</li>
+                                <li><strong>富含维生素D的食物：</strong>鱼类、蛋黄、强化食品</li>
+                                <li><strong>富含维生素C的食物：</strong>柑橘、草莓、猕猴桃、青椒</li>
+                                <li><strong>富含锌的食物：</strong>牡蛎、牛肉、南瓜子</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🚫 避免食物</h3>
+                        <div class="card-content">
+                            <ul style="padding-left: 20px;">
+                                <li>辛辣刺激性食物</li>
+                                <li>高糖高脂食物</li>
+                                <li>酒精和烟草</li>
+                                <li>过咸食物</li>
+                                <li>咖啡因过量摄入</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">💧 水分补充</h3>
+                        <div class="card-content">
+                            <p>每天饮水量应保持在1500-2000ml，促进新陈代谢，帮助排出代谢废物。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="qa" class="content-section">
+                    <h2 class="section-title">💬 智能问答</h2>
+                    <p class="section-desc">有任何关于上肢骨折康复的问题，都可以在这里提问。智能助手会为您提供专业解答。</p>
+
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message bot">
+                                <div class="message-content">
+                                    您好！我是上肢骨折康复智能助手。有什么我可以帮助您的吗？
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-area">
+                            <input type="text" id="userInput" class="chat-input" placeholder="请输入您的问题...">
+                            <button id="sendBtn" class="btn-primary">发送</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="diary" class="content-section">
+                    <h2 class="section-title">📝 康复日记</h2>
+                    <p class="section-desc">记录您的康复过程，追踪进步，分享心得体会。</p>
+
+                    <div class="diary-container">
+                        <div class="diary-form">
+                            <h3 class="form-title">添加日记</h3>
+                            <div class="form-group">
+                                <label>日期</label>
+                                <input type="date" id="diaryDate" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>今日感受</label>
+                                <select id="diaryMood" class="form-input">
+                                    <option value="很好">😊 很好</option>
+                                    <option value="良好">🙂 良好</option>
+                                    <option value="一般">😐 一般</option>
+                                    <option value="不佳">😟 不佳</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>训练内容</label>
+                                <textarea id="diaryContent" class="form-textarea" rows="4" placeholder="记录今天的训练内容和感受..."></textarea>
+                            </div>
+                            <button id="saveDiaryBtn" class="btn-primary">保存日记</button>
+                        </div>
+                        <div class="diary-list" id="diaryList">
+                        </div>
+                    </div>
+                </section>
+
+                <section id="calculator" class="content-section">
+                    <h2 class="section-title">🧮 康复计算</h2>
+                    <p class="section-desc">使用专业的康复计算工具，评估您的康复进度和身体状况。</p>
+
+                    <div class="calculator-grid">
+                        <div class="calculator-card">
+                            <h3 class="calculator-title">BMI计算器</h3>
+                            <div class="calculator-form">
+                                <input type="number" id="bmiHeight" placeholder="身高" class="calc-input">
+                                <input type="number" id="bmiWeight" placeholder="体重" class="calc-input">
+                                <button onclick="calculateBMI()" class="btn-primary">计算</button>
+                                <div id="bmiResult" class="calc-result"></div>
+                            </div>
+                        </div>
+
+                        <div class="calculator-card">
+                            <h3 class="calculator-title">握力指数计算</h3>
+                            <div class="calculator-form">
+                                <input type="number" id="gripForce" placeholder="握力" class="calc-input">
+                                <input type="number" id="bodyWeight" placeholder="体重" class="calc-input">
+                                <button onclick="calculateGripIndex()" class="btn-primary">计算</button>
+                                <div id="gripResult" class="calc-result"></div>
+                            </div>
+                        </div>
+
+                        <div class="calculator-card">
+                            <h3 class="calculator-title">关节活动度计算</h3>
+                            <div class="calculator-form">
+                                <input type="number" id="jointAngle" placeholder="关节角度" class="calc-input">
+                                <input type="number" id="normalAngle" placeholder="正常角度" class="calc-input">
+                                <button onclick="calculateROM()" class="btn-primary">计算</button>
+                                <div id="romResult" class="calc-result"></div>
+                            </div>
+                        </div>
+
+                        <div class="calculator-card">
+                            <h3 class="calculator-title">训练强度计算</h3>
+                            <div class="calculator-form">
+                                <input type="number" id="maxWeight" placeholder="最大重量" class="calc-input">
+                                <input type="number" id="trainingWeight" placeholder="训练重量" class="calc-input">
+                                <button onclick="calculateIntensity()" class="btn-primary">计算</button>
+                                <div id="intensityResult" class="calc-result"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="tools" class="content-section">
+                    <h2 class="section-title">🛠️ 康复工具</h2>
+                    <p class="section-desc">实用的康复工具，帮助您更好地进行康复训练。</p>
+
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <div class="tool-icon">⏱️</div>
+                            <h3 class="tool-title">计时器</h3>
+                            <p class="tool-desc">用于训练计时</p>
+                            <div class="tool-display" id="timerDisplay">00:00</div>
+                            <div class="tool-controls">
+                                <button onclick="startTimer()" class="btn-small">开始</button>
+                                <button onclick="stopTimer()" class="btn-small">停止</button>
+                                <button onclick="resetTimer()" class="btn-small">重置</button>
+                            </div>
+                        </div>
+
+                        <div class="tool-card">
+                            <div class="tool-icon">🔢</div>
+                            <h3 class="tool-title">计数器</h3>
+                            <p class="tool-desc">记录训练次数</p>
+                            <div class="tool-display" id="counterDisplay">0</div>
+                            <div class="tool-controls">
+                                <button onclick="incrementCounter()" class="btn-small">+1</button>
+                                <button onclick="resetCounter()" class="btn-small">重置</button>
+                            </div>
+                        </div>
+
+                        <div class="tool-card">
+                            <div class="tool-icon">📅</div>
+                            <h3 class="tool-title">提醒设置</h3>
+                            <p class="tool-desc">设置训练提醒</p>
+                            <input type="time" id="reminderTime" class="form-input">
+                            <button onclick="setReminder()" class="btn-primary">设置提醒</button>
+                        </div>
+
+                        <div class="tool-card">
+                            <div class="tool-icon">📏</div>
+                            <h3 class="tool-title">测量记录</h3>
+                            <p class="tool-desc">记录身体测量数据</p>
+                            <input type="number" id="measureValue" placeholder="测量值" class="form-input">
+                            <button onclick="saveMeasurement()" class="btn-primary">保存记录</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="emergency" class="content-section">
+                    <h2 class="section-title">🚑 紧急联系</h2>
+                    <p class="section-desc">紧急情况下快速联系医疗专业人员。</p>
+
+                    <div class="emergency-container">
+                        <div class="emergency-card emergency-hotline">
+                            <div class="emergency-icon">📞</div>
+                            <h3 class="emergency-title">急救电话</h3>
+                            <p class="emergency-number">120</p>
+                            <button onclick="callEmergency('120')" class="btn-emergency">拨打</button>
+                        </div>
+
+                        <div class="emergency-card">
+                            <div class="emergency-icon">🏥</div>
+                            <h3 class="emergency-title">主治医生</h3>
+                            <input type="text" id="doctorName" placeholder="医生姓名" class="form-input">
+                            <input type="tel" id="doctorPhone" placeholder="医生电话" class="form-input">
+                            <button onclick="saveDoctorInfo()" class="btn-primary">保存信息</button>
+                            <button onclick="callDoctor()" class="btn-emergency">联系医生</button>
+                        </div>
+
+                        <div class="emergency-card">
+                            <div class="emergency-icon">👨‍👩‍👧‍👦</div>
+                            <h3 class="emergency-title">紧急联系人</h3>
+                            <input type="text" id="emergencyName" placeholder="联系人姓名" class="form-input">
+                            <input type="tel" id="emergencyPhone" placeholder="联系人电话" class="form-input">
+                            <button onclick="saveEmergencyContact()" class="btn-primary">保存信息</button>
+                            <button onclick="callEmergencyContact()" class="btn-emergency">联系家人</button>
+                        </div>
+
+                        <div class="emergency-card">
+                            <div class="emergency-icon">🏠</div>
+                            <h3 class="emergency-title">附近医院</h3>
+                            <input type="text" id="hospitalName" placeholder="医院名称" class="form-input">
+                            <input type="text" id="hospitalAddress" placeholder="医院地址" class="form-input">
+                            <button onclick="saveHospitalInfo()" class="btn-primary">保存信息</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="goals" class="content-section">
+                    <h2 class="section-title">🎯 目标设定</h2>
+                    <p class="section-desc">使用SMART原则设定明确的康复目标，追踪进度，保持动力。</p>
+
+                    <div class="goals-container">
+                        <div class="goal-form">
+                            <h3 class="form-title">设定新目标</h3>
+                            <div class="form-group">
+                                <label>目标描述</label>
+                                <input type="text" id="goalDescription" placeholder="具体、可衡量的目标" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>目标类型</label>
+                                <select id="goalType" class="form-input">
+                                    <option value="短期">短期目标（1-4周）</option>
+                                    <option value="中期">中期目标（1-3个月）</option>
+                                    <option value="长期">长期目标（3-6个月）</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>截止日期</label>
+                                <input type="date" id="goalDeadline" class="form-input">
+                            </div>
+                            <button onclick="addGoal()" class="btn-primary">添加目标</button>
+                        </div>
+                        <div class="goals-list" id="goalsList">
+                        </div>
+                    </div>
+                </section>
+
+                <section id="plan" class="content-section">
+                    <h2 class="section-title">📋 训练计划</h2>
+                    <p class="section-desc">个性化的训练计划，根据您的康复阶段和目标定制。</p>
+
+                    <div class="plan-container">
+                        <div class="plan-form">
+                            <h3 class="form-title">定制训练计划</h3>
+                            <div class="form-group">
+                                <label>康复阶段</label>
+                                <select id="planStage" class="form-input">
+                                    <option value="acute">急性期（1-2周）</option>
+                                    <option value="subacute">亚急性期（3-6周）</option>
+                                    <option value="recovery">恢复期（7-12周）</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>训练频率</label>
+                                <select id="planFrequency" class="form-input">
+                                    <option value="daily">每天</option>
+                                    <option value="every2days">每2天</option>
+                                    <option value="weekly">每周</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>训练时长</label>
+                                <input type="number" id="planDuration" placeholder="分钟" class="form-input">
+                            </div>
+                            <button onclick="generatePlan()" class="btn-primary">生成计划</button>
+                        </div>
+                        <div class="plan-display" id="planDisplay">
+                        </div>
+                    </div>
+                </section>
+
+                <section id="statistics" class="content-section">
+                    <h2 class="section-title">📈 数据统计</h2>
+                    <p class="section-desc">可视化展示您的康复数据，追踪进步趋势。</p>
+
+                    <div class="stats-container">
+                        <div class="stats-card">
+                            <h3 class="stats-title">训练完成率</h3>
+                            <div class="stats-chart">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="trainingProgress" style="width: 0%"></div>
+                                </div>
+                                <p class="stats-value" id="trainingPercent">0%</p>
+                            </div>
+                        </div>
+
+                        <div class="stats-card">
+                            <h3 class="stats-title">关节活动度改善</h3>
+                            <div class="stats-chart">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="romProgress" style="width: 0%"></div>
+                                </div>
+                                <p class="stats-value" id="romPercent">0%</p>
+                            </div>
+                        </div>
+
+                        <div class="stats-card">
+                            <h3 class="stats-title">肌肉力量恢复</h3>
+                            <div class="stats-chart">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="strengthProgress" style="width: 0%"></div>
+                                </div>
+                                <p class="stats-value" id="strengthPercent">0%</p>
+                            </div>
+                        </div>
+
+                        <div class="stats-card">
+                            <h3 class="stats-title">疼痛评分变化</h3>
+                            <div class="stats-chart">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="painProgress" style="width: 0%"></div>
+                                </div>
+                                <p class="stats-value" id="painPercent">0%</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="checkin" class="content-section">
+                    <h2 class="section-title">✅ 每日打卡</h2>
+                    <p class="section-desc">每天打卡记录训练情况，养成良好习惯，保持康复动力。</p>
+
+                    <div class="checkin-container">
+                        <div class="checkin-card">
+                            <h3 class="checkin-title">今日打卡</h3>
+                            <div class="checkin-items">
+                                <label class="checkin-item">
+                                    <input type="checkbox" id="checkin1" class="checkin-checkbox">
+                                    <span>完成康复训练</span>
+                                </label>
+                                <label class="checkin-item">
+                                    <input type="checkbox" id="checkin2" class="checkin-checkbox">
+                                    <span>记录康复日记</span>
+                                </label>
+                                <label class="checkin-item">
+                                    <input type="checkbox" id="checkin3" class="checkin-checkbox">
+                                    <span>完成测量记录</span>
+                                </label>
+                                <label class="checkin-item">
+                                    <input type="checkbox" id="checkin4" class="checkin-checkbox">
+                                    <span>学习康复知识</span>
+                                </label>
+                            </div>
+                            <button onclick="submitCheckin()" class="btn-primary">提交打卡</button>
+                        </div>
+
+                        <div class="checkin-calendar" id="checkinCalendar">
+                            <h3 class="calendar-title">打卡记录</h3>
+                            <div class="calendar-grid" id="calendarGrid">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="selftest" class="content-section">
+                    <h2 class="section-title">🔍 并发症自测</h2>
+                    <p class="section-desc">自我评估并发症风险，及时发现问题，寻求专业帮助。</p>
+
+                    <div class="selftest-container">
+                        <div class="selftest-form">
+                            <h3 class="form-title">并发症风险评估</h3>
+                            <div class="test-item">
+                                <label>患肢是否出现明显肿胀？</label>
+                                <select id="swelling" class="form-input">
+                                    <option value="0">无</option>
+                                    <option value="1">轻度</option>
+                                    <option value="2">中度</option>
+                                    <option value="3">重度</option>
+                                </select>
+                            </div>
+                            <div class="test-item">
+                                <label>是否感觉患肢麻木或刺痛？</label>
+                                <select id="numbness" class="form-input">
+                                    <option value="0">无</option>
+                                    <option value="1">偶尔</option>
+                                    <option value="2">经常</option>
+                                    <option value="3">持续</option>
+                                </select>
+                            </div>
+                            <div class="test-item">
+                                <label>关节活动是否受限？</label>
+                                <select id="jointLimit" class="form-input">
+                                    <option value="0">无</option>
+                                    <option value="1">轻度</option>
+                                    <option value="2">中度</option>
+                                    <option value="3">重度</option>
+                                </select>
+                            </div>
+                            <div class="test-item">
+                                <label>是否出现发热症状？</label>
+                                <select id="fever" class="form-input">
+                                    <option value="0">无</option>
+                                    <option value="1">低热</option>
+                                    <option value="2">中度发热</option>
+                                    <option value="3">高热</option>
+                                </select>
+                            </div>
+                            <button onclick="assessRisk()" class="btn-primary">评估风险</button>
+                            <div id="riskResult" class="risk-result"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="quiz" class="content-section">
+                    <h2 class="section-title">📝 知识测验</h2>
+                    <p class="section-desc">通过测验检验您的康复知识掌握程度，巩固学习成果。</p>
+
+                    <div class="quiz-container">
+                        <div class="quiz-card" id="quizCard">
+                            <h3 class="quiz-title" id="quizTitle">问题 1/10</h3>
+                            <p class="quiz-question" id="quizQuestion"></p>
+                            <div class="quiz-options" id="quizOptions">
+                            </div>
+                            <button onclick="nextQuestion()" class="btn-primary" id="nextBtn" style="display: none;">下一题</button>
+                        </div>
+                        <div class="quiz-result" id="quizResult" style="display: none;">
+                            <h3>测验完成！</h3>
+                            <p>您的得分：<span id="quizScore"></span>/10</p>
+                            <button onclick="restartQuiz()" class="btn-primary">重新测验</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="community" class="content-section">
+                    <h2 class="section-title">👥 康复社区</h2>
+                    <p class="section-desc">与其他康复患者交流经验，分享心得，互相鼓励。</p>
+
+                    <div class="community-container">
+                        <div class="post-form">
+                            <h3 class="form-title">发布帖子</h3>
+                            <textarea id="postContent" class="form-textarea" rows="4" placeholder="分享您的康复经历或提问..."></textarea>
+                            <button onclick="publishPost()" class="btn-primary">发布</button>
+                        </div>
+                        <div class="posts-list" id="postsList">
+                            <div class="post-card">
+                                <div class="post-header">
+                                    <span class="post-author">康复达人</span>
+                                    <span class="post-time">2024-01-15</span>
+                                </div>
+                                <div class="post-content">
+                                    经过3个月的康复训练，我的手臂功能已经恢复了80%！坚持就是胜利！💪
+                                </div>
+                                <div class="post-actions">
+                                    <button class="btn-small">👍 点赞</button>
+                                    <button class="btn-small">💬 评论</button>
+                                </div>
+                            </div>
+                            <div class="post-card">
+                                <div class="post-header">
+                                    <span class="post-author">康复新手</span>
+                                    <span class="post-time">2024-01-14</span>
+                                </div>
+                                <div class="post-content">
+                                    请问大家，康复训练时感到轻微疼痛正常吗？需要停止训练吗？
+                                </div>
+                                <div class="post-actions">
+                                    <button class="btn-small">👍 点赞</button>
+                                    <button class="btn-small">💬 评论</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="analysis" class="content-section">
+                    <h2 class="section-title">📊 数据分析</h2>
+                    <p class="section-desc">上传Excel数据文件，进行专业分析并生成报告。</p>
+
+                    <div class="analysis-container">
+                        <div class="upload-area">
+                            <h3 class="form-title">上传数据文件</h3>
+                            <input type="file" id="excelFile" accept=".xlsx,.xls,.csv" class="file-input">
+                            <button onclick="analyzeData()" class="btn-primary">开始分析</button>
+                        </div>
+                        <div class="analysis-result" id="analysisResult" style="display: none;">
+                            <h3>分析报告</h3>
+                            <div id="reportContent"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="chat" class="content-section">
+                    <h2 class="section-title">🤖 智能对话</h2>
+                    <p class="section-desc">与豆包智能体进行对话，获取个性化康复建议。</p>
+
+                    <div class="ai-chat-container">
+                        <div class="chat-messages" id="aiChatMessages">
+                            <div class="message bot">
+                                <div class="message-content">
+                                    您好！我是您的康复智能助手。有什么我可以帮助您的吗？
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-area">
+                            <input type="text" id="aiUserInput" class="chat-input" placeholder="请输入您的问题...">
+                            <button id="aiSendBtn" class="btn-primary">发送</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="papers" class="content-section">
+                    <h2 class="section-title">📚 论文与视频</h2>
+                    <p class="section-desc">权威的学术论文和实用的康复视频，帮助您深入了解康复知识。</p>
+
+                    <div class="papers-container">
+                        <div class="papers-section">
+                            <h3 class="section-subtitle">📄 学术论文</h3>
+                            <div class="papers-list">
+                                <div class="paper-item" onclick="showPaperDetail(0)">
+                                    <h4 class="paper-title">上肢骨折康复训练的系统评价</h4>
+                                    <p class="paper-author">作者：张明等</p>
+                                    <p class="paper-journal">发表期刊：中华骨科杂志</p>
+                                    <button class="paper-btn">📖 查看全文</button>
+                                </div>
+                                <div class="paper-item" onclick="showPaperDetail(1)">
+                                    <h4 class="paper-title">桡骨远端骨折术后康复方案研究</h4>
+                                    <p class="paper-author">作者：李华等</p>
+                                    <p class="paper-journal">发表期刊：中国康复医学杂志</p>
+                                    <button class="paper-btn">📖 查看全文</button>
+                                </div>
+                                <div class="paper-item" onclick="showPaperDetail(2)">
+                                    <h4 class="paper-title">肱骨髁上骨折儿童康复训练效果分析</h4>
+                                    <p class="paper-author">作者：王芳等</p>
+                                    <p class="paper-journal">发表期刊：中华小儿外科杂志</p>
+                                    <button class="paper-btn">📖 查看全文</button>
+                                </div>
+                                <div class="paper-item" onclick="showPaperDetail(3)">
+                                    <h4 class="paper-title">肩关节骨折术后早期康复干预研究</h4>
+                                    <p class="paper-author">作者：刘强等</p>
+                                    <p class="paper-journal">发表期刊：中国运动医学杂志</p>
+                                    <button class="paper-btn">📖 查看全文</button>
+                                </div>
+                                <div class="paper-item" onclick="showPaperDetail(4)">
+                                    <h4 class="paper-title">肘关节骨折术后康复训练指南</h4>
+                                    <p class="paper-author">陈静等</p>
+                                    <p class="paper-journal">发表期刊：中华物理医学与康复杂志</p>
+                                    <button class="paper-btn">📖 查看全文</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="videos-section">
+                            <h3 class="section-subtitle">🎬 康复视频</h3>
+                            <div class="videos-grid">
+                                <div class="video-card">
+                                    <div class="video-thumbnail">
+                                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/your-video-id-1" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <h4 class="video-title">上肢骨折康复训练基础教程</h4>
+                                    <p class="video-desc">适合初学者的基础康复动作演示</p>
+                                </div>
+                                <div class="video-card">
+                                    <div class="video-thumbnail">
+                                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/your-video-id-2" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <h4 class="video-title">肩关节康复训练进阶</h4>
+                                    <p class="video-desc">肩关节功能恢复的专业训练方法</p>
+                                </div>
+                                <div class="video-card">
+                                    <div class="video-thumbnail">
+                                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/your-video-id-3" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <h4 class="video-title">肘关节康复训练指导</h4>
+                                    <p class="video-desc">肘关节活动度恢复的训练技巧</p>
+                                </div>
+                                <div class="video-card">
+                                    <div class="video-thumbnail">
+                                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/your-video-id-4" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <h4 class="video-title">手腕骨折康复训练</h4>
+                                    <p class="video-desc">手腕功能恢复的实用训练方法</p>
+                                </div>
+                                <div class="video-card">
+                                    <div class="video-thumbnail">
+                                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/your-video-id-5" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <h4 class="video-title">手指骨折康复训练</h4>
+                                    <p class="video-desc">手指精细功能恢复的训练指导</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
